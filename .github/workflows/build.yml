@@ -15,6 +15,14 @@ jobs:
           java-version: 21
       - name: Compilar
         run: |
+          G=$(find . -name gradlew -not -path './.git/*' | head -1)
+          if [ -z "$G" ]; then
+            echo "No se encontró gradlew. Estos son los archivos del repo:"
+            ls -R | head -50
+            exit 1
+          fi
+          cd "$(dirname "$G")"
+          echo "Proyecto en: $(pwd)"
           chmod +x gradlew
           ./gradlew build --no-daemon
       - name: Subir el .jar
@@ -22,5 +30,5 @@ jobs:
         with:
           name: osucraft-jar
           path: |
-            build/libs/*.jar
-            !build/libs/*-sources.jar
+            **/build/libs/*.jar
+            !**/build/libs/*-sources.jar
