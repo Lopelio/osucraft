@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "osucraft",
+	"version": "${version}",
+	"name": "OsuCraft",
+	"description": "osu! dentro de Minecraft: clic derecho al bloque, jugá Standard o Mania, personalizá las teclas, creá niveles e importá mapas .osz.",
+	"authors": ["OsuCraft"],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.osucraft.OsuCraft"],
+		"client": ["com.osucraft.client.OsuCraftClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.18.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

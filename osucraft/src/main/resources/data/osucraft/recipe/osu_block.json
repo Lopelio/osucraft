@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"P": "minecraft:pink_dye",
+		"N": "minecraft:note_block"
+	},
+	"pattern": [
+		"PPP",
+		"PNP",
+		"PPP"
+	],
+	"result": {
+		"count": 1,
+		"id": "osucraft:osu_block"
+	}
+}
